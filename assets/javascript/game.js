@@ -34,6 +34,7 @@ function reset() {
     attempts = [];
 }
 
+// display on the screen - not working
 function updateScreen() {
     document.getElementById("wins").innerText = wins;
     document.getElementById("losses").innerText = losses;
@@ -41,3 +42,11 @@ function updateScreen() {
     document.getElementById("newWord").innerText = lettersInTitle.join("");
     document.getElementById("attempts").innerText = attempts;
 }
+
+// PSEUDOCODE
+// onkeyup function to note whenever a letter is chosen
+// compare letter chosen using indexOf 
+// if indexOf === -1, then it is not in the word so we decrement no. of guesses accordingly and push to attempts array
+// if indexOf > -1, then display on page
+// if guessLeft <= 0, then increment loss counter and game over
+// if there are no "_" left in lettersInTitle, then winner
