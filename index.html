@@ -15,7 +15,29 @@
         <h2>Guess what word I'm thinking</h2>
         <br>
         <article class="article" id="game"></article>
-        
+        <main>
+            <div class="container">
+                <div class="middle">
+                    <p id="pressPlay">press any alphabet key to play</p>    
+                    <p id="answerWord"> </p>
+                </div>
+                <div class="left side">
+                    <div class="wins">
+                        <h4>Wins</h4>
+                        <p id="wins"></p>
+                    </div>
+                    <div class="losses">
+                        <h4>Losses</h4>
+                        <p id="losses"></p>
+                    </div>
+                </div>
+                <div class="right side">
+                    <h4><span id="guessLeft"></span> lives remaining</h4>
+                    <h4>Guessed Letters</h4>
+                    <p id="attempts"></p>
+                </div>
+            </div>
+        </main>
 
         <script src="assets/javascript/game.js"></script>
     </body>
