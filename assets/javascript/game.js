@@ -12,10 +12,11 @@ var words = [
 
 var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V","W", "X", "Y", "Z"];
 
-var wins = 0;
+var wins = 0; 
 var losses = 0;
 var guessLeft = 9;
 var attempts = [];
+var guessedLetters = [];
 var newWord = "";
 var lettersInTitle = [];
 var numBlanks = 0;
@@ -27,11 +28,18 @@ function reset() {
 
     newWord = words[Math.floor(Math.random() * words.length)];
     console.log(newWord);
-    lettersInTitle = newWord.split('');
-    numBlanks = lettersInTitle.length;
-    console.log(numBlanks);
-    startGame();
-}
+
+    lettersInTitle = [];
+
+    for (var i = 0; i < newWord.length; i++) {
+        lettersInTitle = "_";
+    }
+  
+  function checkGuess(letter) {
+      if(attempts.indexOf(letter)=== -1) {
+          attempts.push(letter);
+      }
+  }
 
 
 
